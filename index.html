@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Abdullah Reda | AI Engineer & API Architect</title>
+    <meta name="description" content="I'm Abdullah Reda, AI Engineer and API Architect. Creator of AgentForge AI Engine, an API that generates complete apps from text descriptions.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="gradient-orb"></div>
+    <div class="gradient-orb orb-2"></div>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-badge">
+                <span>🤖 AI Engineer & API Architect</span>
+            </div>
+            <h1>Building the <span class="accent">infrastructure</span> for AI-powered applications.</h1>
+            <p class="hero-sub">
+                I'm Abdullah Reda. I design and build API-as-a-Service products. 
+                My flagship project, <strong>AgentForge AI Engine</strong>, generates full-stack applications from natural language prompts.
+            </p>
+            <div class="hero-actions">
+                <a href="#agentforge" class="btn-primary">📌 Explore AgentForge API</a>
+                <a href="https://github.com/abdullahreda1969" target="_blank" rel="noopener noreferrer" class="btn-secondary">🐙 GitHub Profile</a>
+            </div>
+        </div>
+
+        <!-- AgentForge Section (Your Main Product) -->
+        <div id="agentforge" class="product-card">
+            <div class="product-badge">⚡ FLAGSHIP API</div>
+            <h2>AgentForge AI Engine</h2>
+            <p>Generate ready-to-run Streamlit applications from a single sentence. <strong>API-as-a-Service</strong> for developers, startups, and AI builders. Save hundreds of development hours.</p>
+            
+            <div class="tech-stack">
+                <span>FastAPI</span> <span>SQLite</span> <span>Smart Templates</span> <span>Diploi</span> <span>RapidAPI</span>
+            </div>
+
+            <!-- Interactive Demo Mock -->
+            <div class="demo-mock">
+                <div class="mock-header">
+                    <span>$ curl -X POST</span> <span class="mock-copy" onclick="copyDemoCode()">📋 Copy</span>
+                </div>
+<pre><code>curl -X POST https://my-dev--agentforge-f0bc.diploi.me/v1/generate \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key_here" \
+  -d '{"description": "Simple contact book with name and phone", "project_name": "MyApp"}'</code></pre>
+            </div>
+
+            <div class="button-group">
+                <a href="https://rapidapi.com/abdullahreda1969/api/agentforge-ai-engine" target="_blank" rel="noopener noreferrer" class="btn-primary">📌 Try it on RapidAPI</a>
+                <a href="https://my-dev--agentforge-f0bc.diploi.me/docs" target="_blank" rel="noopener noreferrer" class="btn-secondary">📚 API Documentation</a>
+                <a href="https://github.com/abdullahreda1969/AgentForge-API" target="_blank" rel="noopener noreferrer" class="btn-secondary">🐙 Source Code</a>
+            </div>
+        </div>
+
+        <!-- Other Projects (Clean Grid) -->
+        <div class="section-header">
+            <h2>Other Engineering Work</h2>
+            <p>Full-stack applications, logistics platforms, and custom development.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="project-icon">📦</div>
+                <h3>ProjectMaster-Pro</h3>
+                <p>Project management platform with real-time dashboards, team collaboration, and task tracking.</p>
+                <div class="project-tech"><span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Tailwind</span></div>
+            </div>
+            <div class="project-item">
+                <div class="project-icon">🚢</div>
+                <h3>Mahran Shipping</h3>
+                <p>Shipment tracking system with live location, status updates, and interactive maps for logistics companies.</p>
+                <div class="project-tech"><span>JavaScript</span> <span>Maps API</span> <span>Responsive</span></div>
+            </div>
+        </div>
+
+        <!-- Skills / Tools -->
+        <div class="section-header">
+            <h2>Core Expertise</h2>
+        </div>
+        <div class="skills-cloud">
+            <span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span><span>React</span><span>Node.js</span>
+            <span>TypeScript</span><span>MongoDB</span><span>GitHub Actions</span><span>REST APIs</span><span>API Integration</span><span>Prompt Engineering</span>
+        </div>
+
+        <footer>
+            <p>© 2026 Abdullah Reda — AI Developer / API Architect</p>
+            <p>🚀 <strong>AgentForge</strong> — Turning text into working applications.</p>
+        </footer>
+    </main>
+
+    <script>
+        function copyDemoCode() {
+            // استخراج النص من عنصر <pre> (بدون أزرار وبدون عناصر إضافية)
+            const preElement = document.querySelector('.demo-mock pre code');
+            const textToCopy = preElement.innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const copyBtn = document.querySelector('.mock-copy');
+                const originalText = copyBtn.innerText;
+                copyBtn.innerText = '✅ Copied!';
+                setTimeout(() => { copyBtn.innerText = originalText; }, 2000);
+            }).catch(err => {
+                alert('Could not copy, but you can select the text manually.');
+            });
+        }
+    </script>
+</body>
+</html>
